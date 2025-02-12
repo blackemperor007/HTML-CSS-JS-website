@@ -1998,8 +1998,12 @@ ol {
 ========================================*/
 .hero-area {
   position: relative;
-  padding: 180px 0 120px 0;
-  background: #2a0a55;
+padding: 180px 0 120px 0;
+background: linear-gradient(rgba(34, 34, 34, 0.842), rgba(36, 34, 34, 0.836)), 
+            url(../images/hero/9038440.avif);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
