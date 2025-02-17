@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Connexion/Inscription - Appvilla</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.svg" />
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/auth.css" />
+</head>
+
+<body>
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="nav-inner">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="../index.html">
+                                <img src="../assets/images/logo/white-logo.svg" alt="Logo">
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Area -->
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-forms">
+                <!-- Formulaire de connexion -->
+                <div class="signin-signup">
+                    <h2 class="form-title">Connexion</h2>
+                    <form class="sign-in-form">
+                        <div class="input-field">
+                            <input type="email" placeholder="Email" required />
+                        </div>
+                        <div class="input-field">
+                            <input type="password" placeholder="Mot de passe" required />
+                        </div>
+                        <button type="submit" class="btn-auth">Se connecter</button>
+                        <div class="social-icons">
+                            <a href="#"><i class="lni lni-facebook-filled"></i></a>
+                            <a href="#"><i class="lni lni-google"></i></a>
+                            <a href="#"><i class="lni lni-linkedin-original"></i></a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Panneau latéral -->
+                <div class="panels-container">
+                    <div class="panel left-panel">
+                        <h3>Nouveau ici ?</h3>
+                        <p>Créez un compte pour accéder à toutes nos fonctionnalités</p>
+                        <button class="btn-auth btn-transparent" id="sign-up-btn">S'inscrire</button>
+                    </div>
+                    <div class="panel right-panel">
+                        <h3>Déjà membre ?</h3>
+                        <p>Connectez-vous pour continuer votre expérience</p>
+                        <button class="btn-auth btn-transparent" id="sign-in-btn">Se connecter</button>
+                    </div>
+                </div>
+
+                <!-- Formulaire d'inscription -->
+                <div class="signin-signup" style="opacity: 0; z-index: -1;">
+                    <h2 class="form-title">Inscription</h2>
+                    <form class="sign-up-form">
+                        <div class="input-field">
+                            <input type="text" placeholder="Nom complet" required />
+                        </div>
+                        <div class="input-field">
+                            <input type="email" placeholder="Email" required />
+                        </div>
+                        <div class="input-field">
+                            <input type="password" placeholder="Mot de passe" required />
+                        </div>
+                        <div class="input-field">
+                            <input type="password" placeholder="Confirmer le mot de passe" required />
+                        </div>
+                        <button type="submit" class="btn-auth">S'inscrire</button>
+                        <div class="social-icons">
+                            <a href="#"><i class="lni lni-facebook-filled"></i></a>
+                            <a href="#"><i class="lni lni-google"></i></a>
+                            <a href="#"><i class="lni lni-linkedin-original"></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+        const authBox = document.querySelector('.auth-box');
+        const signUpBtn = document.querySelector('#sign-up-btn');
+        const signInBtn = document.querySelector('#sign-in-btn');
+        const forms = document.querySelectorAll('.signin-signup');
+
+        signUpBtn.addEventListener('click', () => {
+            authBox.classList.add('active');
+            forms[0].style.opacity = '0';
+            forms[0].style.zIndex = '-1';
+            forms[1].style.opacity = '1';
+            forms[1].style.zIndex = '1';
+        });
+
+        signInBtn.addEventListener('click', () => {
+            authBox.classList.remove('active');
+            forms[0].style.opacity = '1';
+            forms[0].style.zIndex = '1';
+            forms[1].style.opacity = '0';
+            forms[1].style.zIndex = '-1';
+        });
+    </script>
+</body>
+
+</html> 
