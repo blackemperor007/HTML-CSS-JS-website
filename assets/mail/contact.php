@@ -51,9 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Si pas d'erreurs, envoyer l'email
     if (empty($errors)) {
         // Email de destination
-        $to = "votre-email@domaine.com"; // Remplacez par votre email
+        $to = "support@abotracking.tech";
 
-        // Construire le contenu de l'email
         $email_content = "Nouveau message de contact\n\n";
         $email_content .= "Nom: $name\n";
         $email_content .= "Email: $email\n";
